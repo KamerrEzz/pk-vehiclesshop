@@ -18,3 +18,11 @@ server_scripts {
 shared_scripts {
     'config.lua'
 }
+
+ui_page "nui/nui.html"
+files {
+    'nui/nui.html',
+    'nui/nui.css',
+    'nui/nui.js',
+    'nui/cursor.webp'
+}

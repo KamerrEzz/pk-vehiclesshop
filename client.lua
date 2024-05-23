@@ -6,30 +6,11 @@ RegisterCommand(config.commandName ,function(source,args)
     local ped = GetPlayerServerId(PlayerId())
     print(ped)
     if ped then
-        local menu = {
-            {
-                header = 'Tienda de carro el buen cuyo',
-                isMenuHeader = true,
-            }
-        }
-    
-        for i, v in ipairs(config.cars) do
-            table.insert(menu, {
-                header = v.name,
-                txt = "Cuesta: "..v.price.."$",
-                params = {
-                    isServer = true,
-                    event = 'store-car:server:buy',
-                    args = {
-                        car = v.model,
-                        src = ped,
-                        price = v.price
-                    }
-                }
-            })
-        end
-    
-        exports['qb-menu']:openMenu(menu)
+      SendNUIMessage({
+        action = 'nui_principal',
+        cars = config.cars
+      })
+      SetNuiFocus(true, true)
     else
         TriggerEvent('store-car:client:notify', {
             msg = "no hay jugador",
