@@ -1,15 +1,15 @@
 config = {}
 
-config.commandName = "tienda-vehiculos"
+config.commandName = "Tienda-vehiculos"
 config.cars = {
     { name = "Vapid FMJ", price = 250000, model = "fmj" },
     { name = "Ocelot XA-21", price = 245000, model = "xa21" },
     { name = "Banshee", price = 180000, model = "banshee" },
     { name = "Comet", price = 100000, model = "comet" },
     { name = "Banshee 900R", price = 1300000, model = "banshee2" },
-    { name = "Turismo R", price = 150000, model = "turimosr" },
+    { name = "Turismo R", price = 150000, model = "turimor" },
     { name = "Zentorno", price = 200000, model = "zentorno" },
-    { name = "Double T", price = 30000, model = "doublet" },
+    { name = "Double T", price = 30000, model = "double" },
     { name = "Adder", price = 250000, model = "adder" },
     { name = "T20", price = 220000, model = "t20" },
     { name = "Osiris", price = 210000, model = "osiris" },
@@ -17,6 +17,25 @@ config.cars = {
     { name = "Entity XF", price = 230000, model = "entityxf" },
     { name = "Toros", price = 50000, model = "toros" },
     { name = "Lampadati Novak", price = 70000, model = "novak" },
-    { name = "Ubermacht Rebla GTS", price = 75000, model = "rebla" },
-    { name = "Infernus", price = 210000, model = "binfernus" },
-}
+    { name = "BUbermacht Rebla GTS", price = 75000, model = "rebla" },
+    { name = "Infernus", price = 210000, model = "infernus" },
+    { name = "Pegassi Tezeract", price = 250000, model = "tezeract" },
+    { name = "Vindicator", price = 150000, model = "vindicator" },
+    { name = "Dominator", price = 170000, model = "dominator" },
+    { name = "Xls", price = 220000, model = "xls" },
+    { name = "Italigto", price = 200000, model = "italigto" },
+    { name = "Penumbra2", price = 100000, model = "penumbra2" },
+    { name = "Specter2", price = 250000, model = "specter2" },
+    { name = "Furia", price = 150000, model = "furia" },
+    { name = "Vacca", price = 200000, model = "vacca" },
+    { name = "Tempesta", price = 180000, model = "tempesta" },
+    { name = "Tezeract", price = 150000, model = "tezeract" },
+    { name = "Visione", price = 270000, model = "visione" },
+    { name = "Zorrusso", price = 170000, model = "zorrusso" },
+    { name = "Vagner", price = 160000, model = "vagner" },
+    { name = "Italigtb2", price = 200000, model = "italigtb2" },
+    { name = "Italigtb", price = 180000, model = "italigtb" },
+    { name = "Emerus", price = 190000, model = "emerus" },
+    { name = "Cyclone", price = 210000, model = "cyclone" },
+    { name = "Autarch", price = 230000, model = "nautarch" },
+    }
