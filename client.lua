@@ -44,7 +44,6 @@ RegisterNetEvent("store-car:client:notify", function(args)
 end)
 
 RegisterNetEvent('store-car:client:spawn', function(args)
-    local Player = QBCore.Functions.GetPlayerData()
     local cors = GetEntityCoords(PlayerPedId())
     QBCore.Functions.TriggerCallback('QBCore:Server:SpawnVehicle', function(netId)
          local veh = NetToVeh(netId)
