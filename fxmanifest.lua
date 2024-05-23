@@ -5,7 +5,7 @@ name 'Tienda de carros'
 description 'comprame un carro'
 author 'Estudiantes de kamerr'
 
-version '1.0.0'
+version '1.1.2'
 
 client_scripts {
     'client.lua',

@@ -31,7 +31,10 @@ RegisterCommand(config.commandName ,function(source,args)
     
         exports['qb-menu']:openMenu(menu)
     else
-        TriggerEvent('store-car:client:notify', "No hay Ped")
+        TriggerEvent('store-car:client:notify', {
+            msg = "no hay jugador",
+            type = "error"
+        })
     end
 
 end)
