@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    width: 90vw;
+    height: 90vh;
+    background: #2c2c2c71;
+}
+
+#cars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 20vw));
+    gap: .3vw;
+}
+
+
+.hidden {
+    display: none;
+}
+
+body {
+    padding: 1vw;
+}
+
+li {
+    color: white;
+    padding: .3vw;
+    background: #2c2c2cbf;
+    border: .3vw solid rgba(255, 255, 255, 0.27) ;
+}
+
+li:hover {
+    cursor: url('cursor.webp'), pointer;
+    border: .3vw solid rgba(255, 255, 255, 0.859) ;
+}
