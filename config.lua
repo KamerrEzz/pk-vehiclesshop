@@ -1,6 +1,6 @@
 config = {}
 
-config.commandName = "Tienda-vehiculos"
+config.commandName = "stv"
 config.cars = {
     { name = "Vapid FMJ", price = 250000, model = "fmj" },
     { name = "Ocelot XA-21", price = 245000, model = "xa21" },

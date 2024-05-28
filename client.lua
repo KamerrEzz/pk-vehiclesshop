@@ -31,3 +31,13 @@ RegisterNetEvent('store-car:client:spawn', function(args)
          TriggerEvent('vehiclekeys:client:SetOwner', QBCore.Functions.GetPlate(veh))
     end, args.model, cors, true)
 end)
+
+RegisterNUICallback('close', function(args, cb)
+    
+    SetNuiFocus(false, false)
+    SendNUIMessage({
+        action = "nui_hidden"
+    })
+
+    cb({})
+end)

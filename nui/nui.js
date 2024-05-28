@@ -11,5 +11,26 @@ window.addEventListener('message', function(event){
         // document.getElementById('container').classList.add('show')
         document.getElementById('container').classList.remove('hidden')
         document.getElementById('cars').innerHTML = carsList
+
+        document.getElementById('close').addEventListener('click', function(event) {
+            fetch('https://store-car/close', {
+                method: "POST",
+                body: JSON.stringify({})
+            })
+        })
+    }
+
+    if (data.action == "nui_hidden") {
+        document.getElementById('container').classList.add('hidden')
+    }
+})
+
+document.addEventListener('keydown',  function (event) {
+    console.log(JSON.stringify(event.key));
+    if(event.key == "Escape" || event.key == "Backspace") {
+        fetch('https://store-car/close', {
+                method: "POST",
+                body: JSON.stringify({})
+            })
     }
 })
