@@ -4,11 +4,13 @@ local QBCore = exports["qb-core"]:GetCoreObject()
 
 RegisterCommand(config.commandName ,function(source,args)
     local ped = GetPlayerServerId(PlayerId())
-    print(ped)
+    local Player = QBCore.Functions.GetPlayerData()
+    print(json.encode(Player, { indent = true}))
     if ped then
       SendNUIMessage({
         action = 'nui_principal',
-        cars = config.cars
+        cars = config.cars,
+        currentMoney = Player.money.bank
       })
       SetNuiFocus(true, true)
     else
@@ -39,5 +41,18 @@ RegisterNUICallback('close', function(args, cb)
         action = "nui_hidden"
     })
 
+    cb({})
+end)
+
+RegisterNUICallback('click', function(args, cb)
+    TriggerServerEvent('store-car:server:buy', {
+        car = args.model,
+        src = GetPlayerServerId(PlayerId()),
+        price = tonumber(args.price)
+    })
+    SetNuiFocus(false, false)
+    SendNUIMessage({
+        action = "nui_hidden"
+    })
     cb({})
 end)

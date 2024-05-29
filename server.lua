@@ -2,6 +2,7 @@ local QBCore = exports["qb-core"]:GetCoreObject()
 print("server")
 
 RegisterNetEvent("store-car:server:buy", function(args)
+    print(json.encode(args))
     local Player = QBCore.Functions.GetPlayer(args.src)
     print(args.src)
 

@@ -5,18 +5,30 @@ window.addEventListener('message', function(event){
         let carsList = ""
         for (let i = 0; i < data.cars.length; i++) {
             const element = data.cars[i];
-            carsList += `<li>${element.name} - $${element.price}</li>`
+            carsList += `<li id="${element.model}" data-price="${element.price}" data-model="${element.model}" data-type="item">${element.name} - $${element.price}</li>`
         }
 
         // document.getElementById('container').classList.add('show')
         document.getElementById('container').classList.remove('hidden')
         document.getElementById('cars').innerHTML = carsList
+        document.getElementById('currentMoney').innerHTML = data.currentMoney
 
         document.getElementById('close').addEventListener('click', function(event) {
             fetch('https://store-car/close', {
                 method: "POST",
                 body: JSON.stringify({})
             })
+        })
+
+        
+        document.addEventListener('click', function (event) {
+            const dataset = event.target.dataset
+            if(dataset && dataset.type == "item") {
+                fetch('https://store-car/click', {
+                    method: "POST",
+                    body: JSON.stringify(dataset)
+                })
+            }
         })
     }
 
@@ -26,7 +38,6 @@ window.addEventListener('message', function(event){
 })
 
 document.addEventListener('keydown',  function (event) {
-    console.log(JSON.stringify(event.key));
     if(event.key == "Escape" || event.key == "Backspace") {
         fetch('https://store-car/close', {
                 method: "POST",

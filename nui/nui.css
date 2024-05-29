@@ -12,10 +12,23 @@
 
 #cars {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(0, 20vw));
+    grid-template-columns: repeat(auto-fit, minmax(0, 29.8vw));
     gap: .3vw;
 }
 
+#close  {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: red;
+    font-weight: bold;
+    font-size: 5vw;
+    cursor: pointer;
+}
+
+#close:hover {
+    opacity: .5;
+}
 
 .hidden {
     display: none;
